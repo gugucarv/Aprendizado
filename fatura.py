@@ -1,0 +1,5 @@
+fulano=input('Digite o nome do Fulano: ')
+dia_vencimento=input('Digite o dia do vencimento: ')
+mes_vencimento=input('Digite o mês do vencimento: ')
+valor_fatura=input('Digite o valor da Fatura (R$) (ex. 350,00): ')
+print(f'Olá, {fulano}\nA sua fatura com vencimento em {dia_vencimento} de {mes_vencimento} no valor de R$ {valor_fatura} está fechada.')
