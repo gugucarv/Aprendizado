@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Cor Aleatória</string>
-    <string name="botao_mudar_cor">Mudar cor</string>
+    <string name="instrucao">Toque na tela</string>
+    <string name="rodape">gugucarv</string>
 </resources>

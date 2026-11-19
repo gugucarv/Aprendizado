@@ -1,6 +1,6 @@
 # Cor Aleatória (Android)
 
-App Android simples: um botão no centro da tela e, a cada clique, o fundo muda para uma cor aleatória.
+App Android simples: a cada toque em qualquer lugar da tela, o fundo muda para uma cor aleatória e aparecem o código (ex.: `#3FA2C8`) e o nome aproximado da cor. O texto fica claro ou escuro conforme o fundo, para ser sempre legível.
 
 ## Como rodar
 
@@ -11,5 +11,5 @@ App Android simples: um botão no centro da tela e, a cada clique, o fundo muda 
 
 ## Onde está o código
 
-- `app/src/main/java/com/exemplo/coraleatoria/MainActivity.kt`: a lógica do clique e o sorteio da cor.
-- `app/src/main/res/layout/activity_main.xml`: o layout da tela com o botão.
+- `app/src/main/java/com/exemplo/coraleatoria/MainActivity.kt`: o sorteio da cor, o nome e o contraste do texto.
+- `app/src/main/res/layout/activity_main.xml`: o layout da tela (código, nome e rodapé).
