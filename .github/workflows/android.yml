@@ -3,8 +3,8 @@
 # e também pode ser iniciado à mão pela aba Actions ("Run workflow").
 name: Compilar app Android
 
-# Título de cada build na lista do Actions: a primeira linha do commit.
-run-name: "APK: ${{ github.event.head_commit.message || 'compilação manual' }}"
+# O título de cada build na lista do Actions é a primeira linha do commit;
+# a mensagem completa aparece no resumo da build (passo 6).
 
 on:
   push:
