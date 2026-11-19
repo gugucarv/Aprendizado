@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- O "manifesto" é a carteira de identidade do app: diz ao Android
+     o nome, o tema e quais telas existem. -->
+
+<!-- <manifest> é a tag principal. xmlns:android habilita os atributos "android:...". -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!-- <application> descreve o app como um todo.
+         android:allowBackup -> true = o Android pode fazer backup dos dados do app
+         android:label       -> nome do app, vem de strings.xml ("Cor Aleatória")
+         android:theme       -> tema visual, vem de themes.xml -->
     <application
         android:allowBackup="true"
         android:label="@string/app_name"
         android:theme="@style/Theme.CorAleatoria">
 
+        <!-- <activity> registra uma tela. Toda tela precisa estar aqui.
+             android:name     -> a classe da tela (o ponto no começo = pacote do app)
+             android:exported -> true = pode ser aberta de fora do app (pelo ícone) -->
         <activity
             android:name=".MainActivity"
             android:exported="true">
+            <!-- <intent-filter> diz em que situações esta tela abre. -->
             <intent-filter>
+                <!-- MAIN = esta é a tela inicial do app. -->
                 <action android:name="android.intent.action.MAIN" />
+                <!-- LAUNCHER = coloca o ícone do app na lista de apps do celular. -->
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

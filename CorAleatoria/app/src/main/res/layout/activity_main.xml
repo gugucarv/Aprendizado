@@ -1,4 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- A linha acima avisa que este é um arquivo XML com acentos em UTF-8. -->
+
+<!-- Este arquivo desenha a tela. Cada <Elemento> é algo que aparece nela.
+     Em XML não dá para comentar dentro de uma tag, por isso cada
+     elemento tem um comentário acima explicando as linhas dele. -->
+
+<!-- FrameLayout: uma "caixa" que empilha os elementos um por cima do outro.
+     Aqui ela é o fundo inteiro da tela.
+     xmlns:android         -> habilita os atributos "android:..." no arquivo
+     android:id            -> nome "tela", usado no Kotlin com R.id.tela
+     layout_width/height   -> match_parent = ocupa a tela toda (largura e altura)
+     android:background    -> cor inicial do fundo: branco (#FFFFFF)
+     android:clickable     -> true = aceita toques (é o que muda a cor)
+     android:focusable     -> true = pode receber foco (bom para acessibilidade) -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/tela"
     android:layout_width="match_parent"
@@ -7,6 +21,11 @@
     android:clickable="true"
     android:focusable="true">
 
+    <!-- LinearLayout: uma caixa que coloca os elementos em fila.
+         layout_width/height -> wrap_content = só do tamanho do que tem dentro
+         layout_gravity      -> center = fica no meio da tela
+         gravity             -> center_horizontal = centraliza o conteúdo dentro dela
+         orientation         -> vertical = um elemento embaixo do outro -->
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -14,6 +33,13 @@
         android:gravity="center_horizontal"
         android:orientation="vertical">
 
+        <!-- TextView do código da cor (o texto grande do centro).
+             android:id          -> nome "codigo", usado no Kotlin com R.id.codigo
+             layout_width/height -> wrap_content = do tamanho do texto
+             android:text        -> texto inicial, vem de strings.xml ("Toque na tela")
+             android:textColor   -> cor inicial do texto: preto (#000000)
+             android:textSize    -> tamanho 40sp ("sp" respeita o tamanho de fonte do celular)
+             android:textStyle   -> bold = negrito -->
         <TextView
             android:id="@+id/codigo"
             android:layout_width="wrap_content"
@@ -23,7 +49,17 @@
             android:textSize="40sp"
             android:textStyle="bold" />
     </LinearLayout>
+    <!-- Fim do LinearLayout. -->
 
+    <!-- TextView do rodapé com o nome do autor.
+         android:id              -> nome "rodape", usado no Kotlin com R.id.rodape
+         layout_width/height     -> wrap_content = do tamanho do texto
+         layout_gravity          -> bottom|center_horizontal = embaixo e centralizado
+         layout_marginBottom     -> 24dp de espaço até a borda de baixo ("dp" = medida que
+                                    fica do mesmo tamanho em qualquer tela)
+         android:text            -> texto vem de strings.xml ("gugucarv")
+         android:textColor       -> cor inicial: preto
+         android:textSize        -> tamanho 16sp (menor que o código) -->
     <TextView
         android:id="@+id/rodape"
         android:layout_width="wrap_content"
@@ -35,3 +71,4 @@
         android:textSize="16sp" />
 
 </FrameLayout>
+<!-- Fim do FrameLayout (e da tela). -->

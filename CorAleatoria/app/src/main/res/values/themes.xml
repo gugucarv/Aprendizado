@@ -1,3 +1,7 @@
+<!-- Este arquivo define o tema (aparência geral) do app. -->
 <resources>
+    <!-- Cria o tema "Theme.CorAleatoria" baseado num tema pronto do Android:
+         fundo claro (Light) com barra de título escura no topo (DarkActionBar).
+         O AndroidManifest.xml aplica este tema ao app inteiro. -->
     <style name="Theme.CorAleatoria" parent="Theme.AppCompat.Light.DarkActionBar" />
 </resources>

@@ -1,5 +1,11 @@
+<!-- Este arquivo guarda os textos do app num só lugar.
+     Assim fica fácil mudar ou traduzir sem mexer no resto do código.
+     No layout eles são usados como "@string/nome". -->
 <resources>
+    <!-- Nome do app, mostrado embaixo do ícone no celular. -->
     <string name="app_name">Cor Aleatória</string>
+    <!-- Texto que aparece no centro ao abrir o app, antes do primeiro toque. -->
     <string name="instrucao">Toque na tela</string>
+    <!-- Texto do rodapé. -->
     <string name="rodape">gugucarv</string>
 </resources>
